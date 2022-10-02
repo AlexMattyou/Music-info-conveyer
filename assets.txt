@@ -1,0 +1,12 @@
+color palet:
+https://coolors.co/1e1e24-20a39e-ef5b5b-7692ff-f1f1f1
+
+fonts:
+https://fonts.google.com/share?selection.family=Fredoka%20One%7CSignika:wght@600
+
+
+testing api key:
+https://api.steinhq.com/v1/storages/6336ba2ad27cdd09f0c1fdbc
+
+real api:
+*(Won't be shown) use testing api（￣︶￣）↗

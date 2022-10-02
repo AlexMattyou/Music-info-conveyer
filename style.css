@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Signika:wght@600&display=swap');
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: var(--c1);
+}
+:root{
+  --c1:  #1E1E24;
+  --c2:  #20A39E;
+  --c3:  #EF5B5B;
+  --c4:  #7692FF;
+  --c5:  #F1F1F1;
+  --f2: 'Fredoka One', serif;
+  --f3: 'Signika', sans-serif;
+}
+*{
+  color: var(--c1);
+}
+*{
+  position: relative;
+  transition: all 0.6s ease;
+}
+#back{
+  font-size: 20px;
+  z-index: 10000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+.area{
+    background: var(--c1);  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 102%;
+    height:102%;
+    z-index: -10000 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0px;
+    padding: 0px;
+}
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: var(--c5);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    font-family: var(--f3);
+    font-size: 30px;
+    
+}
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(2){
+    left: 10%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 2s;
+    animation-duration: 10s;
+}
+.circles li:nth-child(3){
+    left: 70%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 4s;
+}
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+.circles li:nth-child(5){
+    left: 65%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(6){
+    left: 75%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 3s;
+}
+.circles li:nth-child(7){
+    left: 35%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 20s;
+}
+.circles li:nth-child(8){
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 15s;
+  animation-duration: 10s;
+}
+.circles li:nth-child(9){
+  left: 20%;
+  width: 70px;
+  height: 70px;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+@keyframes animate {
+
+    0%{
+        transform: translateY(-1000px);
+        opacity: 0.7;
+        border-radius: 10px;
+        background-color: var(--c4);
+    }
+    100%{
+        transform: translateY(0);
+        background-color: var(--c2);
+        opacity: 0.7;
+    }
+
+}
+*{
+  border-radius: 5px;
+  outline-color: var(--c3);
+}
+html{
+  scroll-behavior: smooth;
+}
+@media only screen /*Mobile*/
+and (orientation: portrait){
+#rotate{
+  display: none;
+}
+body{
+  background-color: var(--c1);
+}
+p, textarea{
+  font-family: var(--f3);
+  font-size: 20px;
+}
+button{
+  border: 0;
+  font-size: 40px;
+  font-family: var(--f3);
+  border-radius: 2px;
+  margin: 3px;
+}
+#page{
+  padding: auto;
+  font-size: 40px;
+  font-family: var(--f2);
+  background-color:var(--c5);
+  border-radius: 5px;
+  margin: 75% 18px;
+  z-index: 10;
+  opacity: 0.8
+}
+#page button{
+  opacity: 1;
+  padding: 10px;
+  width: 70%;
+  font-family: var(--v2);
+  font-size: 40px;
+  margin: 5px;
+  border: 0;
+  border-radius: 5px;
+}
+#page button:nth-child(2){
+  background-color: var(--c4)
+}
+#page button:nth-child(3){
+  background-color: var(--c2);
+  margin-bottom: 15px;
+}
+#chords,#messages{
+  padding: 10px;
+}
+#fill button{
+  background-color: transparent;
+  border: 0;
+  padding: 10px;
+  margin: 3px;
+}
+#fill button:nth-child(1){
+  background-color: var(--c4);
+}
+#fill button:nth-child(2){
+  background-color: var(--c5);
+}
+#fill button:nth-child(3){
+  background-color: var(--c2);
+  padding: 0;
+}
+#fill{
+  margin : 10px auto auto auto;
+  display: grid;
+  grid-template-columns: 33.33% 45.67% 21%;
+}
+#table{
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+}
+#table button{
+  background-color: var(--c5);
+  padding: 10px;
+}
+.sym{
+  background-color: var(--c3) !important;
+}
+#messages button{
+  font-size: 25px;
+  width: 98.5%;
+  padding: 10px 0;
+  height: 100px;
+}
+#messages button:nth-child(1), #messages button:nth-child(3){
+  border-bottom: 5px var(--c2) solid;
+}
+#messages button:nth-child(2), #messages button:nth-child(4){
+  border-bottom: 5px var(--c4) solid;
+}
+#own{
+  height: 100px;
+  background-color: var(--c5);
+  margin: 0 10px;
+  display: flex;
+}
+#own textarea{
+  width: 80%;
+  max-height: 85%;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-size: x-large;
+  padding: 10px;
+  background-color: transparent;
+}
+#own button{
+  background-color: var(--c2);
+  margin: 0;
+  border-radius: 0 2px 2px 0 !important;
+}
+#display{
+  margin: 100px 0 0 0;
+  background-color: var(--c5);
+  width: 90%;
+  height: 350px;
+  color: var(--c1);
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 50px 50px 0 0;
+  border-top: 15px var(--c2) solid;
+}
+#info{
+  position: relative;
+  bottom: 360px;
+  width: 90%;
+  height: 100px;
+  align-items: space-between;
+  justify-items: space-between;
+}
+#ctrl button{
+  background-color: var(--c2);
+  border-radius: 0 0 100% 100%;
+  width: 90%;
+  margin: 0 10px;
+}
+#info img{
+  width: 70px;
+  height: 70px;
+}
+#scalepad{
+  font-size: 20px;
+  z-index: 10000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+#fill, #table{
+  position: relative;
+  bottom: -500px;
+}
+#history{
+  z-index: 10000;
+  height: 230px;
+  width: 90%;
+  position: relative;
+  bottom: 50px;
+  overflow: hidden;
+  padding: 5px;
+  background-color: transparent;
+}
+#history p{
+  color: var(--c5);
+  font-size: 30px;
+  padding: 3px 0;
+  margin: 0;
+}
+#display p{
+  font-size: 30px;
+  padding: 30px 0;
+}
+}
+@media only screen /*Mobile*/
+and (orientation: landscape){
+#page,#send,#get,#back{
+  display: none;
+}
+#rotate{
+  padding: 140px 20px;
+}
+#rotate p{
+  font-size: 30px;
+  color: var(--c5);
+  font-family: var(--f2);
+}
+}
