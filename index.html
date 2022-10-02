@@ -1,0 +1,80 @@
+<!doctype html>
+<script>
+  const api_key = "https://api.steinhq.com/v1/storages/6336ba2ad27cdd09f0c1fdbc";
+  const user = 'unknown';
+</script>
+<html lang="en">
+  <head>
+    <title>Scale-communicator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <center>
+      <div id="rotate">
+        <p>Rotate your device to portrait</p>
+      </div>
+      <section class="area">
+        <ul class="circles">
+          <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        </ul>
+      </section>
+      <section id="page">
+        <P><br>Select your role</P>
+        <button id="sendB">Send</button>
+        <button id="getB">Get</button>
+      </section>
+      <section id="send">
+        <div id="chords">
+          <div id="messages">
+            <button onClick="send('v+')">Increase the volume</button>
+            <button onClick="send('v-')">Decrease the volume</button>
+            <button onClick="send('t+')">Increase the Tempo</button>
+            <button onClick="send('t-')">Decrease the Tempo</button>
+          </div>
+          <div id="own">
+            <textarea placeholder="Send a custom message" id="own" name="own"></textarea><button onClick="send('send')">➡️</button>
+          </div>
+          <div id="fill">
+            <button id="note" onClick="add('m')">m</button>
+            <button id="noteDisp"></button>
+            <button onClick="send('ok')">✅</button>
+          </div>
+          <div id="table">
+            <button onClick="add('C')">C</button>
+            <button onClick="add('D')">D</button>
+            <button onClick="add('E')">E</button>
+            <button onClick="add('F')">F</button>
+            <button onClick="add('G')">G</button>
+            <button onClick="add('A')">A</button>
+            <button class="sym" onClick="add('#')">#</button>
+            <button onClick="add('B')">B</button>
+            <button class="sym" onClick="add('♭')"><b>♭</b></button>
+          </div>
+          <button id="scalepad">Scale-pad</button>
+        </div>
+      </section>
+      <section id="get" class="not">
+        <div id="display">
+          <p>No recent messages!</p>
+        </div>
+        <div id="ctrl">
+          <button>Start</button>
+        </div>
+        <div id="info">
+          <img src='https://icons.alexmattyou.repl.co/notes-c/d.svg'>
+          <p>Press the start to run</p>
+        </div>
+        <div id='history'></div>
+      </section>
+      </center>
+    <button id='back' onClick='back()'>Reload</button>
+  </body>
+  <script src="https://unpkg.com/stein-js-client"></script>
+  <script>const store = new SteinStore(api_key);</script>
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+  <script src="script.js" async></script>
+</html>
+
